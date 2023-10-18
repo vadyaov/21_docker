@@ -84,15 +84,18 @@ Ip-адрес контейнера находится в поле `NetworkSettin
   </p>
 </p>
 
-`"IPAddress": "172.17.0.1."`
+`"IPAddress": "172.17.0.2."`
 
 * **Остановить докер образ через docker stop [container_id|container_name]**
 
-![использование команды docker stop](../images/part_1.6.png)
-
 * **Проверить, что образ остановился через docker ps**
 
-![использование команды docker ps](../images/part_1.7.png)
+<p align="center">
+  <img src="../images/part_1.6.png" />
+  <p align="center">
+    <sup> docker stop + docker ps </sup>
+  </p>
+</p>
 
 * **Запустить докер с портами 80 и 443 в контейнере, замапленными на такие же порты на локальной машине, через команду run**
 
