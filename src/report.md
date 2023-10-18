@@ -3,27 +3,27 @@
 * **Взять официальный докер образ с nginx и выкачать его при помощи `docker pull`**
 
 ![использование команды docker pull](../images/part_1.1.png)
-_docker pull command_
+          _docker pull command_
 
 * **Проверить наличие докер образа через `docker images`**
 
 ![использование команды docker images](../images/part_1.2.png)
-_docker images command_
+          _docker images command_
 
 * **Запустить докер образ через `docker run -d [image_id|repository]`**
 
 ![использование команды docker run](../images/part_1.3.png)
-_docker run command_
+          _docker run command_
 
 * **Проверить, что образ запустился через `docker ps`**
 
 ![использование команды docker ps](../images/part_1.4.png)
-      _docker ps command_
+          _docker ps command_
 
 * **Посмотреть информацию о контейнере через `docker inspect [container_id|container_name]`**
 
 ![использование команды docker inspect](../images/part_1.5.png)
-      _docker inspect command_
+          _docker inspect command_
 
 * **По выводу команды определить и поместить в отчёт размер контейнера, список замапленных портов и ip контейнера**
 
