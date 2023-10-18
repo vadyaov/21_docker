@@ -18,17 +18,17 @@ _docker run command_
 * **Проверить, что образ запустился через `docker ps`**
 
 ![использование команды docker ps](../images/part_1.4.png)
-_docker ps command_
+      _docker ps command_
 
 * **Посмотреть информацию о контейнере через `docker inspect [container_id|container_name]`**
 
 ![использование команды docker inspect](../images/part_1.5.png)
-_docker inspect command_
+      _docker inspect command_
 
 * **По выводу команды определить и поместить в отчёт размер контейнера, список замапленных портов и ip контейнера**
 
-> Kоманда `docker inspect` не предоставляет информации о размерах контейнера.
-  Используя `docker inspect -s nginx`, получаем:
+Kоманда `docker inspect` не предоставляет информации о размерах контейнера.
+Используя `docker inspect -s nginx`, получаем:
 
 ![использование команды docker inspect -s](../images/part_1.5.1.png)
 _docker inspect -s command_
