@@ -1,28 +1,52 @@
 ## Part 1. Готовый докер
 
-* **Взять официальный докер образ с nginx и выкачать его при помощи docker pull**
+* **Взять официальный докер образ с nginx и выкачать его при помощи `docker pull`**
 
 ![использование команды docker pull](../images/part_1.1.png)
+_docker pull command_
 
-* **Проверить наличие докер образа через docker images**
+* **Проверить наличие докер образа через `docker images`**
 
 ![использование команды docker images](../images/part_1.2.png)
+_docker images command_
 
-* **Запустить докер образ через docker run -d [image_id|repository]**
+* **Запустить докер образ через `docker run -d [image_id|repository]`**
 
 ![использование команды docker run](../images/part_1.3.png)
+_docker run command_
 
-* **Проверить, что образ запустился через docker ps**
+* **Проверить, что образ запустился через `docker ps`**
 
 ![использование команды docker ps](../images/part_1.4.png)
+_docker ps command_
 
-* **Посмотреть информацию о контейнере через docker inspect [container_id|container_name]**
+* **Посмотреть информацию о контейнере через `docker inspect [container_id|container_name]`**
 
 ![использование команды docker inspect](../images/part_1.5.png)
+_docker inspect command_
 
 * **По выводу команды определить и поместить в отчёт размер контейнера, список замапленных портов и ip контейнера**
 
-_тут будет информация о контейнере_
+> Kоманда `docker inspect` не предоставляет информации о размерах контейнера.
+  Используя `docker inspect -s nginx`, получаем:
+
+![использование команды docker inspect -s](../images/part_1.5.1.png)
+_docker inspect -s command_
+
+  - "SizeRw": 1095 - Размер файлов, которые были созданы или изменены в контейнере
+  по сравнению с его исходным образом, в байтах. Это представляет собой разницу
+  между состоянием файловой системы контейнера и состоянием файловой системы
+  исходного образа контейнера.
+  - "SizeRootFs": 186738284 - Общий размер всех файлов в контейнере, в байтах.
+  Это включает в себя все файлы, как внутри контейнера, так и файлы из исходного
+  образа контейнера.
+
+
+  - список замапленных портов в данный момент является пустым: `HostConfig.PortBindings: {}`
+
+![использование команды docker inspect](../images/part_1.5.2.png)
+_bindings port list_
+
 
 * **Остановить докер образ через docker stop [container_id|container_name]**
 
