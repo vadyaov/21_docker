@@ -14,9 +14,12 @@ _docker images command_
 
 * **Запустить докер образ через `docker run -d [image_id|repository]`**
 
-![использование команды docker run](../images/part_1.3.png)
-
-_docker run command_
+<p align="center">
+  <img src="../images/part_1.3.png" />
+  <p align="center">
+    <sup> _docker run command_ </sup>
+  </p>
+</p>
 
 * **Проверить, что образ запустился через `docker ps`**
 
