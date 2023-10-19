@@ -99,18 +99,33 @@ Ip-адрес контейнера находится в поле `NetworkSettin
 
 * **Запустить докер с портами 80 и 443 в контейнере, замапленными на такие же порты на локальной машине, через команду run**
 
-![использование команды docker run](../images/part_1.8.png)
+Для запуска Docker контейнера с портами 80 и 443, замапленными на такие же порты на локальной машине, можно использовать опцию -p: `docker run -p x:y <name>` означает, что порт x контейнера будет замапплен на порт у локальной машины.
+
+<p align="center">
+  <img src="../images/part_1.7.png" />
+  <p align="center">
+    <sup> docker run -p </sup>
+  </p>
+</p>
 
 * **Проверить, что в браузере по адресу localhost:80 доступна стартовая страница nginx**
 
-![проверка localhost:80 в браузере](../images/part_1.9.png)
+<p align="center">
+  <img src="../images/part_1.8.png" />
+  <p align="center">
+    <sup> localhost:80 nginx </sup>
+  </p>
+</p>
 
 * **Перезапустить докер контейнер через docker restart [container_id|container_name]**
 
-![использование команды docker restart](../images/part_1.10.png)
-
 * **Проверить любым способом, что контейнер запустился**
 
-![использование команды ...](../images/part_1.11.png)
+<p align="center">
+  <img src="../images/part_1.9.png" />
+  <p align="center">
+    <sup> docker restart </sup>
+  </p>
+</p>
 
 ## Part 2. Операции с контейнером
