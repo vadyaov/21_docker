@@ -141,3 +141,38 @@ Ip-адрес контейнера находится в поле `NetworkSettin
 
 * **Создать на локальной машине файл nginx.conf**
 
+* **Настроить в нем по пути /status отдачу страницы статуса сервера nginx**
+
+<p align="center">
+  <img src="../images/part_2.2.png" />
+  <p align="center">
+    <sup> nginx.conf settings </sup>
+  </p>
+</p>
+
+Этот конфигурационный блок настраивает сервер Nginx на прослушивание порта 80 и
+обработку пути /status. Директива `stub_status` позволяет отдавать страницу статуса
+сервера Nginx. 
+
+* **Скопировать созданный файл nginx.conf внутрь докер образа через команду docker cp** 
+
+* **Перезапустить nginx внутри докер образа через команду exec**
+
+<p align="center">
+  <img src="../images/part_2.3.png" />
+  <p align="center">
+    <sup> copying and testing </sup>
+  </p>
+</p>
+
+* **Проверить, что по адресу localhost:80/status отдается страничка со статусом сервера nginx**
+
+Проверил по адресу `127.0.0.1:80/status`, так как при попытке задать `server_name localhost`
+происходил конфликт имен.
+
+<p align="center">
+  <img src="../images/part_2.4.png" />
+  <p align="center">
+    <sup> 127.0.0.1/status </sup>
+  </p>
+</p>
