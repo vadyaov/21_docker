@@ -129,3 +129,15 @@ Ip-адрес контейнера находится в поле `NetworkSettin
 </p>
 
 ## Part 2. Операции с контейнером
+
+* **Прочитать конфигурационный файл nginx.conf внутри докер контейнера через команду exec**
+
+<p align="center">
+  <img src="../images/part_2.1.png" />
+  <p align="center">
+    <sup> docker exec </sup>
+  </p>
+</p>
+
+* **Создать на локальной машине файл nginx.conf**
+
