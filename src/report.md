@@ -176,3 +176,101 @@ Ip-адрес контейнера находится в поле `NetworkSettin
     <sup> 127.0.0.1/status </sup>
   </p>
 </p>
+
+* **Экспортировать контейнер в файл container.tar через команду export**
+
+<p align="center">
+  <img src="../images/part_2.5.png" />
+  <p align="center">
+    <sup> docker export </sup>
+  </p>
+</p>
+
+* **Остановить контейнер**
+
+<p align="center">
+  <img src="../images/part_2.6.png" />
+  <p align="center">
+    <sup> docker export </sup>
+  </p>
+</p>
+
+* **Удалить образ через docker rmi [image_id|repository], не удаляя перед этим контейнеры**
+
+<p align="center">
+  <img src="../images/part_2.7.png" />
+  <p align="center">
+    <sup> docker rmi -f </sup>
+  </p>
+</p>
+
+* **Удалить остановленный контейнер**
+
+<p align="center">
+  <img src="../images/part_2.8.png" />
+  <p align="center">
+    <sup> docker rmi -f </sup>
+  </p>
+</p>
+
+* **Импортировать контейнер обратно через команду import**
+
+* **Запустить импортированный контейнер**
+
+
+## Part 3. Мини веб-сервер
+
+* **Написать мини сервер на C и FastCgi, который будет возвращать простейшую
+страничку с надписью Hello World!** 
+
+`sudo apt install libfcgi-dev` - разработочный пакет для библиотеки FastCGI,
+он включает заголовочные файлы и другие ресурсы, необходимые для разработки
+FastCGI-приложений
+
+<p align="center">
+  <img src="../images/part_3.1.png" />
+  <p align="center">
+    <sup> mini C server </sup>
+  </p>
+</p>
+
+`gcc -o hello_fcgi hello_fcgi.c -lfcgi` - компиляция
+
+* **Запустить написанный мини сервер через spawn-fcgi на порту 8080**
+
+<p align="center">
+  <img src="../images/part_3.2.png" />
+  <p align="center">
+    <sup> bash script for server run </sup>
+  </p>
+</p>
+
+_Здесь -a указывает IP-адрес, -p указывает порт, и -n указывает путь к
+скомпилированному серверу hello_fcgi_
+
+* **Написать свой nginx.conf, который будет проксировать все запросы с 81 порта на 127.0.0.1:8080**
+
+<p align="center">
+  <img src="../images/part_3.3.png" />
+  <p align="center">
+    <sup> nginx.conf </sup>
+  </p>
+</p>
+
+* **Проверить, что в браузере по localhost:81 отдается написанная вами страничка**
+
+<p align="center">
+  <img src="../images/part_3.4.png" />
+  <p align="center">
+    <sup> Hello World! </sup>
+  </p>
+</p>
+
+* **Положить файл nginx.conf по пути ./nginx/nginx.conf (это понадобится позже)**
+
+<p align="center">
+  <img src="../images/part_3.5.png" />
+  <p align="center">
+    <sup> move nginx.conf file </sup>
+  </p>
+</p>
