@@ -274,3 +274,47 @@ _Здесь -a указывает IP-адрес, -p указывает порт,
     <sup> move nginx.conf file </sup>
   </p>
 </p>
+
+## Part 4. Свой докер
+
+* **Написать свой докер образ, который:**
+
+  1. собирает исходники мини сервера на FastCgi из Части 3
+  2. запускает его на 8080 порту
+  3. копирует внутрь образа написанный ./nginx/nginx.conf
+  4. запускает nginx. 
+
+<p align="center">
+  <img src="../images/part_4.1.png" />
+  <p align="center">
+    <sup> Dockerfile </sup>
+  </p>
+</p>
+
+* **Собрать написанный докер образ через docker build при этом указав имя и тег**
+
+<p align="center">
+  <img src="../images/part_4.2.png" />
+  <p align="center">
+    <sup> docker build </sup>
+  </p>
+</p>
+
+* **Проверить через docker images, что все собралось корректно**
+
+<p align="center">
+  <img src="../images/part_4.3.png" />
+  <p align="center">
+    <sup> docker images </sup>
+  </p>
+</p>
+
+* **Запустить собранный докер образ с маппингом 81 порта на 80 на локальной машине
+и маппингом папки ./nginx внутрь контейнера по адресу, где лежат конфигурационные файлы nginx'а**
+
+<p align="center">
+  <img src="../images/part_4.4.png" />
+  <p align="center">
+    <sup> docker images </sup>
+  </p>
+</p>
