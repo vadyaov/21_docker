@@ -9,14 +9,12 @@ RUN apt-get update && apt-get install -y \
   nginx
 
 # Copy server source
-COPY ./server/ app/
+RUN mkdir /app
+COPY ./server/fcgi_server.c app/
 
 WORKDIR /app
 RUN gcc -o hello_fcgi fcgi_server.c -lfcgi
-RUN chmod +x ./run_server.sh
-CMD ./run_server.sh
 
-RUN ls /etc/nginx/conf.d
-COPY ./nginx/nginx.conf /etc/nginx/conf.d/
-CMD nginx -g 'daemon off;'
+COPY ./nginx/nginx.conf /etc/nginx/conf.d
 
+ENTRYPOINT ["/bin/bash", "-c", "spawn-fcgi -p 8080 ./hello_fcgi; nginx -g 'daemon off;'"]
