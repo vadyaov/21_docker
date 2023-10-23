@@ -310,6 +310,21 @@ _Здесь -a указывает IP-адрес, -p указывает порт,
 <p align="center">
   <img src="../images/part_4.2.png" />
   <p align="center">
-    <sup> docker build </sup>
+    <sup> docker build + images + run with mapping </sup>
+  </p>
+</p>
+
+* **Дописать в ./nginx/nginx.conf проксирование странички /status, по которой надо отдавать статус сервера nginx**
+
+* **Перезапустить докер образ**
+
+> Если всё сделано верно, то, после сохранения файла и перезапуска контейнера, конфигурационный файл внутри докер образа должен обновиться самостоятельно без лишних действий
+
+* **Проверить, что теперь по localhost:80/status отдается страничка со статусом nginx**
+
+<p align="center">
+  <img src="../images/part_4.3.png" />
+  <p align="center">
+    <sup> adding status using mapping </sup>
   </p>
 </p>
