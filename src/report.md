@@ -217,6 +217,13 @@ Ip-адрес контейнера находится в поле `NetworkSettin
 
 * **Запустить импортированный контейнер**
 
+<p align="center">
+  <img src="../images/part_2.9.png" />
+  <p align="center">
+    <sup> docker import + run </sup>
+  </p>
+</p>
+
 
 ## Part 3. Мини веб-сервер
 
