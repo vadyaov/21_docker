@@ -328,3 +328,30 @@ _Здесь -a указывает IP-адрес, -p указывает порт,
     <sup> adding status using mapping </sup>
   </p>
 </p>
+
+## Part 5. Dockle
+
+* **Просканировать образ из предыдущего задания через dockle [image_id|repository]**
+
+<p align="center">
+  <img src="../images/part_5.1.png" />
+  <p align="center">
+    <sup> dockle errors </sup>
+  </p>
+</p>
+
+* **Исправить образ так, чтобы при проверке через dockle не было ошибок и предупреждений**
+
+<p align="center">
+  <img src="../images/part_5.2.png" />
+  <p align="center">
+    <sup> Dockerfile (new) </sup>
+  </p>
+</p>
+
+<p align="center">
+  <img src="../images/part_5.3.png" />
+  <p align="center">
+    <sup> dockle no errors </sup>
+  </p>
+</p>
