@@ -1,0 +1,22 @@
+version: '3'
+services:
+  mini_serv:
+    image: mini_serv:2.0
+    container_name: mini_serv
+    networks:
+      - my_network
+
+  nginx_container:
+    image: nginx
+    container_name: nginx_container
+    ports:
+      - "8080:80"
+    networks:
+      - my_network
+    links:
+      - mini_serv
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/
+
+networks:
+  my_network:

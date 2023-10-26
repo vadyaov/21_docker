@@ -12,8 +12,6 @@ RUN apt-get update && apt-get install -y \
   nginx \
 && rm -rf /var/lib/apt/lists/*
 
-
-
 RUN useradd -m aboba
 USER aboba
 
@@ -23,7 +21,7 @@ COPY ./server/fcgi_server.c app/
 WORKDIR /app
 USER root
 RUN gcc -o hello_fcgi fcgi_server.c -lfcgi
-USER aboba
+# USER aboba
 
 COPY ./nginx/nginx.conf /etc/nginx/conf.d
 
