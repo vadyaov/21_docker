@@ -365,3 +365,32 @@ _Здесь -a указывает IP-адрес, -p указывает порт,
 
   - **Поднять докер контейнер с nginx, который будет проксировать все запросы с 8080
   порта на 81 порт первого контейнера**
+
+<p align="center">
+  <img src="../images/part_6.1.png" />
+  <p align="center">
+    <sup> docker compose yml </sup>
+  </p>
+</p>
+
+* **3амапить 8080 порт второго контейнера на 80 порт локальной машины**
+
+<p align="center">
+  <img src="../images/part_6.2.png" />
+  <p align="center">
+    <sup> nginx config </sup>
+  </p>
+</p>
+
+* **Остановить все запущенные контейнеры**
+
+* **Собрать и запустить проект с помощью команд docker-compose build и docker-compose up**
+
+* **Проверить, что в браузере по localhost:80 отдается написанная вами страничка, как и ранее**
+
+<p align="center">
+  <img src="../images/part_6.3.png" />
+  <p align="center">
+    <sup> building, up and "Hello world" </sup>
+  </p>
+</p>
